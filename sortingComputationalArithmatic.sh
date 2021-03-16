@@ -30,3 +30,22 @@ do
 	count=$((count+1))
 done
 echo "array " ${storeDic[@]}
+
+
+for (( i=0; i<4; i++ ))
+do
+	for (( j=$i; j<4; j++ ))
+	do
+		if [ ${storeDic[$i]} -lt ${storeDic[$j]} ]
+		then
+			temporary=${storeDic[$i]}
+			storeDic[$i]=${storeDic[$j]}
+			storeDic[$j]=$temporary
+		fi
+	done
+done
+echo "element of the array sorted in descending order: " 
+for (( i=0; i<4; i++ ))
+do
+	echo ${storeDic[$i]}
+done
