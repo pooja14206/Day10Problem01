@@ -12,3 +12,6 @@ echo $result2
 
 result3=$((number3+number1/number2))
 echo $result3
+
+result4=$((number1%number2+number3))
+echo $result4
