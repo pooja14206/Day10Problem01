@@ -19,4 +19,14 @@ echo $result4
 declare -A storeResult
 
 storeResult=(["n1+n2*n3"]=$result1 ["n1*n2+n3"]=$result2 ["n3+n1/n2"]=$result3 ["n1%n2+n3"]=$result4)
-echo ${storeResult[@]}
+echo "dictionary " ${storeResult[@]}
+
+declare -a storeDic
+
+count=0
+for value in ${storeResult[@]}
+do
+	storeDic[$count]=$value
+	count=$((count+1))
+done
+echo "array " ${storeDic[@]}
