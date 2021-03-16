@@ -49,3 +49,21 @@ for (( i=0; i<4; i++ ))
 do
 	echo ${storeDic[$i]}
 done
+
+for (( i=0; i<4; i++ ))
+do
+        for (( j=$i; j<4; j++ ))
+        do
+                if [ ${storeDic[$i]} -gt ${storeDic[$j]} ]
+                then
+                        temporary=${storeDic[$i]}
+                        storeDic[$i]=${storeDic[$j]}
+                        storeDic[$j]=$temporary
+                fi
+        done
+done
+echo "element of the array sorted in assending order: "
+for (( i=0; i<4; i++ ))
+do
+        echo ${storeDic[$i]}
+done
