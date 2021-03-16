@@ -6,3 +6,6 @@ read -p "enter a number " number3
 
 result1=$((number1+number2*number3))
 echo $result1
+
+result2=$((number1*number2+number3))
+echo $result2
