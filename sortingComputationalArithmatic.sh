@@ -9,3 +9,6 @@ echo $result1
 
 result2=$((number1*number2+number3))
 echo $result2
+
+result3=$((number3+number1/number2))
+echo $result3
